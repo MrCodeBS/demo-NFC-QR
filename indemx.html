@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Sign-In</title>
+    <!-- Your CSS and other meta tags can go here -->
+</head>
+<body>
+    <div class="Flexible-Column mod-grow">
+        <div class="forgot-password-container">
+            <a id="adobeid_trouble_signing_in" tabindex="5" class="forgotpassword" href="/renga-idprovider/pages/start_forgot_password?client_id=SunbreakWebUI1&amp;callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fadobeid%2FSunbreakWebUI1%2FAdobeID%2Ftoken%3Fredirect_uri%3Dhttps%253A%252F%252Faccounts.adobe.com%252F%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526reauth%253Dforce%26scope%3DAdobeID%252Copenid%252Csunbreak%252Cacct_mgmt_webui%252Cgnav%252Cadditional_info.account_type%252Csao.cce_private%252Ccreative_cloud%252Cread_countries_regions%252Cupdate_profile.password%252Cadditional_info.roles%252Cupdate_profile.optionalAgreements%252Cupdate_profile.change_password%252Cadditional_info.social%252Csocial.link%252Cunlink_social_account%252Cadmin_slo%252Creauthenticated&amp;denied_callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fdenied%2FSunbreakWebUI1%3Fredirect_uri%3Dhttps%253A%252F%252Faccounts.adobe.com%252F%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526reauth%253Dforce%26response_type%3Dtoken&amp;display=web_v2&amp;locale=en_US&amp;relay=ddf39b99-b9ba-4e0c-af20-f0aa6bd69144&amp;flow=true&amp;flow_type=token&amp;idp_flow_type=login&amp;reauthenticate=force&amp;s_account=adbadobenonacdcprod%2Cadbims" onclick="scReport('SignIn:onClick_ForgotPassword')">
+                Forgot password?
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <span class="nowrap">Not a member yet?</span>
+        <a class="nowrap" href="create_account?client_id=SunbreakWebUI1&amp;callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fadobeid%2FSunbreakWebUI1%2FAdobeID%2Ftoken%3Fredirect_uri%3Dhttps%253A%252F%252Faccounts.adobe.com%252F%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526reauth%253Dforce%26scope%3DAdobeID%252Copenid%252Csunbreak%252Cacct_mgmt_webui%252Cgnav%252Cadditional_info.account_type%252Csao.cce_private%252Ccreative_cloud%252Cread_countries_regions%252Cupdate_profile.password%252Cadditional_info.roles%252Cupdate_profile.optionalAgreements%252Cupdate_profile.change_password%252Cadditional_info.social%252Csocial.link%252Cunlink_social_account%252Cadmin_slo%252Creauthenticated&amp;denied_callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fdenied%2FSunbreakWebUI1%3Fredirect_uri%3Dhttps%253A%252F%252Faccounts.adobe.com%252F%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526reauth%253Dforce%26response_type%3Dtoken&amp;display=web_v2&amp;locale=en_US&amp;relay=ddf39b99-b9ba-4e0c-af20-f0aa6bd69144&amp;flow=true&amp;flow_type=token&amp;idp_flow_type=login&amp;reauthenticate=force&amp;s_account=adbadobenonacdcprod%2Cadbims">Get an Adobe ID</a>
+    </div>
+
+    <div class="row">
+        <a href="#" id="adobeid_signin_enterprise" onclick="signInWithEnterprise()">
+            Sign in with Enterprise ID
+        </a>
+    </div>
+
+    <div class="social">
+        <a href="https://www.facebook.com/dialog/oauth?client_id=202674826450698&amp;redirect_uri=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fadobeid%2FSunbreakWebUI1%2FAdobeID%2Ftoken%3Fredirect_uri%3Dhttps%253A%252F%252Faccounts.adobe.com%252F%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526reauth%253Dforce%26scope%3DAdobeID%252Copenid%252Csunbreak%252Cacct_mgmt_webui%252Cgnav%252Cadditional_info.account_type%252Csao.cce_private%252Ccreative_cloud%252Cread_countries_regions%252Cupdate_profile.password%252Cadditional_info.roles%252Cupdate_profile.optionalAgreements%252Cupdate_profile.change_password%252Cadditional_info.social%252Csocial.link%252Cunlink_social_account%252Cadmin_slo%252Creauthenticated%26response_type%3Dtoken&amp;display=web_v2&amp;locale=en_US&amp;relay=ddf39b99-b9ba-4e0c-af20-f0aa6bd69144&amp;flow=true&amp;flow_type=token&amp;idp_flow_type=login&amp;reauthenticate=force&amp;s_account=adbadobenonacdcprod%2Cadbims&amp;state=fb&amp;scope=email%2Cpublic_profile" id="adobeid_signin_facebook" class="social-signin-facebook">
+            Sign in with Facebook
+        </a>
+        <a href="https://accounts.google.com/o/oauth2/auth?client_id=936475272427-6k7g0dk7h2j5fum64lnhhgd1lhecq5hb.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fadobeid%2FSunbreakWebUI1%2FAdobeID%2Ftoken%3Fredirect_uri%3Dhttps%253A%252F%252Faccounts.adobe.com%252F%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526reauth%253Dforce%26scope%3DAdobeID%252Copenid%252Csunbreak%252Cacct_mgmt_webui%252Cgnav%252Cadditional_info.account_type%252Csao.cce_private%252Ccreative_cloud%252Cread_countries_regions%252Cupdate_profile.password%252Cadditional_info.roles%252Cupdate_profile.optionalAgreements%252Cupdate_profile.change_password%252Cadditional_info.social%252Csocial.link%252Cunlink_social_account%252Cadmin_slo%252Creauthenticated%26response_type%3Dtoken&amp;display=web_v2&amp;locale=en_US&amp;relay=ddf39b99-b9ba-4e0c-af20-f0aa6bd69144&amp;flow=true&amp;flow_type=token&amp;idp_flow_type=login&amp;reauthenticate=force&amp;s_account=adbadobenonacdcprod%2Cadbims&amp;state=g&amp;access_type=offline" id="adobeid_signin_google" class="social-signin-google">
+            Sign in with Google
+        </a>
+    </div>
+
+    <div class="form-container">
+        <form action="https://ims-na1.adobelogin.com/ims/adobeid/SunbreakWebUI1/AdobeID/token" method="post" name="adobeid_signin_form" id="adobeid_signin_form" novalidate="">
+            <div id="adobeid_signin_options" class="section">
+                <div class="row">
+                    <div class="column">
+                        <label for="adobeid_username">Adobe ID</label>
+                    </div>
+                    <div class="column">
+                        <input type="email" name="username" id="adobeid_username" autocomplete="username" required="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="adobeid_password">Password</label>
+                    </div>
+                    <div class="column">
+                        <input type="password" name="password" id="adobeid_password" autocomplete="current-password" required="">
+                    </div>
+                </div>
+            </div>
+            <div class="cta-container">
+                <button id="adobeid_signin_button" class="cta-button" type="submit">
+                    Sign in
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Your JavaScript code can go here -->
+</body>
+</html>
 
